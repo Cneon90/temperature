@@ -9,13 +9,15 @@
 
 	<?php
 	//Выводим все сенсоры через цикл
+		$items = $base->getAll("SELECT * FROM `sensor`");
+		
 			foreach ($items as $key => $value) {
 	?>
 
 			 <div class="sensor"> 
 	<?php
-				 echo ($i+1).'.'.$items[$i]['name'].' <br> '.$items[$i]['alias'] ;
-				 $i++;
+				 echo '.'.$items[$key]['name'].' <br> '.$items[$key]['alias'] ;
+				
 				 echo "</div>";
 				 
 			  }
