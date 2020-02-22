@@ -1,7 +1,8 @@
 body
 {
 	background:#131313;
-	color:white;
+	
+	color:rgb(255,127,127);
 }
 
 
@@ -14,13 +15,71 @@ body
 	float:left;
 	padding:0px 5px 0px 25px;
 	border:1px solid red;
+	border-radius:20px;
 	  transition: all 0.5s ease;
 }
 
 .sensor:hover 
 {
-	color:rgb(255,127,127);
+	
 	border:1px solid white;
 	  transition: all 0.5s ease;
 	  cursor:pointer;
+	  color:white;
+	  border-radius:30px;
+}
+
+.panel
+{
+	height:400px;
+	width:200px;
+	margin:150px;
+	border:1px solid white;
+}
+
+.centr
+{
+	text-align:center;
+}
+
+
+.right
+{
+	text-align:right;
+}
+
+
+
+.all
+{
+	
+	
+	border:1px solid white;
+	padding:10px 50px 10px 50px;
+}
+
+
+
+.device
+{
+	border:1px solid white;
+	height:80px;
+	width:200px;
+	margin:10px;
+	float:left;
+		transition:1s all;
+}
+
+.device:hover
+{
+	border:1px solid red;
+	transition:1s all;
+	cursor:pointer;
+	background:blue;
+	color:white;
+}
+
+.name
+{
+	border:1px solid white;
 }

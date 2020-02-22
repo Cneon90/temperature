@@ -1,0 +1,30 @@
+<?php
+ session_start();
+ class User //Класс отправки уведомлений
+   {
+	 public $name_user=null;
+	 
+	 public function getUser($name)
+		 {
+			 $this -> name_user = $name;
+			 $_SESSION['user'] = $this -> name_user;
+			 return $this -> name_user;
+		 }
+													
+	 public function isUser()
+		{
+			if( $this -> name_user!=null) {
+				return 1;
+			}
+			else 
+			{
+				
+				return 0;
+			}
+			
+		}
+		
+   }
+  
+   
+   ?>
