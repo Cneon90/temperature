@@ -1,0 +1,55 @@
+<?php
+ 
+ class Push //Класс отправки уведомлений
+   {
+	 private $getCh="none";	//значение по умолчанию	
+	 public function send($title='title',$text='text',$url='url') {
+		 
+		 curl_setopt_array($ch = curl_init(), array
+			(
+				CURLOPT_URL => "https://pushall.ru/api.php",
+				CURLOPT_POSTFIELDS => array
+				(
+						"type" => "broadcast",
+						"id" => "5349",
+						"key" => "f849f968381218ae32253c95960ae2a8",
+						"text" => $text,
+						"title" => $title,
+						"url" => $url,
+						"priority" => "1",
+				),
+			CURLOPT_SAFE_UPLOAD => true,
+			CURLOPT_RETURNTRANSFER => true
+		));
+		
+		 $this->getCh = curl_exec($ch); //получить данные о рассылке
+		 curl_close($ch);
+	 }
+	 
+	 
+	 public function status()
+	 {
+		echo  $this->getCh;//Принимаем JSON и выводим)) ибо и так в нем все ясно)) 
+														/*$warning = json_decode($msg, true);//Парсим
+														if(isset($warning["error"])) 
+														  {		
+															echo $warning["error"];//Выводим сообщение об ошибке 
+														  } else 
+														  {
+															echo $warning["success"];
+														  }
+														*/
+	 }
+													
+	 
+	 
+   }
+   
+   //Пример
+			/*$message = new push;
+   $message -> send("ki2ril2l2","meg krut","google.com");
+   $message -> status(); //получить статус при необходимости 
+			*/
+   
+   
+   ?>
