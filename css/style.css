@@ -1,0 +1,26 @@
+body
+{
+	background:#131313;
+	color:white;
+}
+
+
+.sensor
+{
+	background:red;
+	width:100px;
+	height:100px;
+	margin:10px;
+	float:left;
+	padding:0px 5px 0px 25px;
+	border:1px solid red;
+	  transition: all 0.5s ease;
+}
+
+.sensor:hover 
+{
+	color:rgb(255,127,127);
+	border:1px solid white;
+	  transition: all 0.5s ease;
+	  cursor:pointer;
+}
