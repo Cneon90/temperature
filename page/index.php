@@ -1,93 +1,34 @@
 <html>
 
 <head>
-	  <title> <?echo $title ?> </title>
+	  <title> <?echo $user_name; ?> </title>
 	   <link href="..\css\bootstrap.css" rel="stylesheet" type="text/css">
-	  <link href="..\css\style.css" rel="stylesheet" type="text/css">
-	 
+	   <link href="..\css\style.css" rel="stylesheet" type="text/css">
+	   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	  <script src="..\js\jquery.js"></script> 
+	   <script src="..\js\script.js"></script> 
 </head>
 
 <body> 
 
-
-	<div class="all">
-
-		<div class="container">
-		  <div class="row">
-			<div class="col-12 centr">
-				 Заголовок
-				 <br>
-				 <br>
-				 <br>
-				 <br>
+   
+	<div class="all polo">
 			
-				 <br>
-			</div>
-		   </div>
-		   
-		     <div class="row">
-			<div class="col-12 right">
-				Имя пользователя: <?php echo $user_name; ?>
-				 
-			</div>
-		   </div>
-		</div>	
-
-
-
-
-
-
-
-			<div class="container">
-				<div class="row">
-					<div class="col-2">
-							<br>
-							Меню
-							<br>
-							<br>
-							<?php echo $menu[0]; ?>
-							<br>
-							<?php echo $menu[1]; ?>
-							<br>
-							<?php echo $menu[2]; ?>
-								<br>
-								<br>
-								<br>
-								<br>
-								<br>
-								<br>
-							Вход | Регистрация
-					</div>
-					
-					<div class="col-10 ">
-
-								<?php	//include_once("sensor.php");		?>
-								<?php	include_once("data.php");		?>
-
-				</div>
-
-			</div>		
-		</div>	
-
-		  
-
-
-
-		<div class="container">
-		  <div class="row">
-			<div class="col-12 centr">
-			   Подвал
-			  
-			</div>
-			</div>
+		   <?php 
+		     if(isset($_GET['put']))
+			 {
+		   	  $put = 'page\\'.$_GET['put'].'.php';	
+			 }
+			 if(isset($_GET['put']) && file_exists($put))
+			 {
+				include_once($put);
+			 } else 
+			     include_once('page\one.php');
 			
-
-		  
-		</div>
-
-
-	</div>
+			 
+			 ?>
+</div>
+	
 
 </body>
 

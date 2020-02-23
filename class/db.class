@@ -49,6 +49,20 @@ class DB
 		return self::add($sql);
 	}
  
+	//Мой метод, добавляющий в таблицу температуры
+	public function insert_temp($uid,$data,$temp)
+	{
+		$sql = "INSERT INTO `temperature` (`id`, `uid`, `data`, `temper`) VALUES  (NULL, '$uid', '$data', '$temp')"; 
+		return self::add($sql);
+	}
+ 
+ //Мой метод, добавляющий в таблицу пользователей
+	public function insert_user($name,$pass,$mail)
+	{
+		$sql = "INSERT INTO `users` (`id`, `name`, `password`, `e-mail`,`status`) VALUES  (NULL, '$name', '$pass', '$mail',0)"; 
+		return self::add($sql);
+	}
+ 
 	/**
 	 * Добавление в таблицу, в случаи успеха вернет вставленный ID, иначе 0.
 	 */

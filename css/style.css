@@ -1,8 +1,8 @@
 body
 {
-	background:#131313;
 	
-	color:rgb(255,127,127);
+    font-family: 'Roboto', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;	
+	
 }
 
 
@@ -14,7 +14,7 @@ body
 	margin:10px;
 	float:left;
 	padding:0px 5px 0px 25px;
-	border:1px solid red;
+
 	border-radius:20px;
 	  transition: all 0.5s ease;
 }
@@ -22,7 +22,7 @@ body
 .sensor:hover 
 {
 	
-	border:1px solid white;
+	
 	  transition: all 0.5s ease;
 	  cursor:pointer;
 	  color:white;
@@ -34,7 +34,7 @@ body
 	height:400px;
 	width:200px;
 	margin:150px;
-	border:1px solid white;
+
 }
 
 .centr
@@ -54,15 +54,15 @@ body
 {
 	
 	
-	border:1px solid white;
-	padding:10px 50px 10px 50px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	padding:50px 50px 10px 50px;
 }
 
 
 
 .device
 {
-	border:1px solid white;
+	
 	height:80px;
 	width:200px;
 	margin:10px;
@@ -72,7 +72,7 @@ body
 
 .device:hover
 {
-	border:1px solid red;
+
 	transition:1s all;
 	cursor:pointer;
 	background:blue;
@@ -81,5 +81,117 @@ body
 
 .name
 {
-	border:1px solid white;
+
+}
+
+.censia
+{
+	font-size:90px;
+	cursor:pointer;
+	transition:1s all;
+}
+
+
+.censia:hover
+{
+	color:red;
+	transition:1s all;
+	
+}
+
+
+.polo
+{
+	
+	margin:50px;
+}
+
+.dop
+{
+	
+	padding:100px 0px 0px 0px;
+}
+
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+
+.menu
+{
+	padding:10px;
+	transition:1s all;
+
+	
+}
+.menu a
+{
+	text-decoration:none;
+	color:black;
+	transition:1s all;
+}
+
+.menu:hover a
+{
+	text-decoration:none;
+	transition:1s all;
+	color:red;
+}
+
+.menu:hover
+{
+	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	transition:1s all;
+	cursor:pointer;
+}
+
+
+.stil a
+{
+	text-decoration:none;
+	background:red;
+}	
+   
+.poscentr
+{
+ 
+	transition:1s all;
+
+	padding:50px 20px 20px 400px;
+}	
+
+
+.poscentr input
+{
+	font-size:20px;
+	margin:10px;
+
+}
+
+
+.knopka
+{
+	cursor:pointer;
+}
+
+.results
+{
+
+}
+
+.regknp
+{
+	cursor:pointer;
+	padding:20px;
+	color:blue;
+	transition:1s all;
+}
+
+.regknp:hover
+{
+	color:red;
+	transition:1s all;
 }
